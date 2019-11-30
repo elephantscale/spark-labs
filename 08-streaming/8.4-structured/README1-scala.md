@@ -16,7 +16,7 @@ None
 
 ## STEP 1: Go to project directory
 ```bash
-    $    cd ~/spark-labs/08-streaming/8.4-structured
+    $    cd ~/dev/spark-labs/08-streaming/8.4-structured
 ```
 
 
@@ -31,7 +31,7 @@ We will use `sbt` to build the project.
 
 ```bash
     # be in project root directory
-    $  cd ~/spark-labs/08-streaming/8.4-structured
+    $  cd ~/dev/spark-labs/08-streaming/8.4-structured
     $  sbt clean package
 ```
 
@@ -56,9 +56,9 @@ Open an terminal and run this command at prompt
 
 ```bash
     # be in project root directory
-    $ cd ~/spark-labs/08-streaming/8.4-structured
+    $ cd ~/dev/spark-labs/08-streaming/8.4-structured
 
-    $   ~/spark/bin/spark-submit  --master local[2]   \
+    $   ~/dev/spark/bin/spark-submit  --master local[2]   \
         --driver-class-path logging/  \
         --class x.StructuredStreaming  \
         target/scala-2.11/structured-streaming_2.11-1.0.jar

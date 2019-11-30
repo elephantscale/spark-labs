@@ -26,7 +26,7 @@ STEP 2: Edit source file
 ---------------------
 Go to the project root directory
 ```bash
-    $    cd ~/spark-labs/08-streaming/8.3-kafka
+    $    cd ~/dev/spark-labs/08-streaming/8.3-kafka
 ```
 
 **=> Edit the file : `src/main/scala/x/KafkaDirectStreaming.scala`**  
@@ -37,7 +37,7 @@ We will use `sbt` to build the project.
 
 **==> Inspect the `build.sbt` file**
 ```bash
-    $ cd ~/spark-labs/08-streaming/8.3-kafka
+    $ cd ~/dev/spark-labs/08-streaming/8.3-kafka
 
     #  compile
     $ sbt clean compile
@@ -77,7 +77,7 @@ Here is the screen shot (click on image to see full size image)
 
 **=> Launch kafka streaming application as follows**  
 ```bash
-  $    ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.KafkaDirectStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  localhost:9092  clickstream
+  $    ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.KafkaDirectStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  localhost:9092  clickstream
 ```
 
 Parameters explained:

@@ -89,7 +89,7 @@ val scoreAndLabels = splitTestData.map { point =>
 ## STEP 6: execute the lab
 
 ```bash
-  $   ~/spark/bin/spark-shell -i ./churn_svm.scala
+  $   ~/dev/spark/bin/spark-shell -i ./churn_svm.scala
 ```
 
 ## STEP 7: Note the Area under ROC

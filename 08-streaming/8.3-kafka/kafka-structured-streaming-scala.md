@@ -19,7 +19,7 @@ Follow [Kafka Streaming guide](1-kafka-setup.md) and have kafka running.
 ## STEP 2: Edit source file
 Go to the project root directory
 ```bash
-    $    cd ~/spark-labs/08-streaming/8.3-kafka
+    $    cd ~/dev/spark-labs/08-streaming/8.3-kafka
 ```
 
 **=> Edit the file : `src/main/scala/x/KafkaStructuredStreaming.scala`**  
@@ -30,7 +30,7 @@ We will use `sbt` to build the project.
 
 ** ==> Inspect the `build.sbt` file**
 ```bash
-    $  cd ~/spark-labs/08-streaming/8.3-kafka
+    $  cd ~/dev/spark-labs/08-streaming/8.3-kafka
 
     #  compile
     $  sbt clean compile
@@ -61,7 +61,7 @@ Here is the screen shot (click on image to see full size image)
 
 **=> Launch kafka streaming application as follows**  
 ```bash
-  $ ~/spark/bin/spark-submit  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.3    --master local[2]   --driver-class-path logging/        --class x.KafkaStructuredStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  'clickstream'
+  $ ~/dev/spark/bin/spark-submit  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.3    --master local[2]   --driver-class-path logging/        --class x.KafkaStructuredStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  'clickstream'
 ```
 
 Parameters explained:
@@ -115,7 +115,7 @@ $ sbt clean compile
 
 $ sbt assembly
 
-$ ~/spark/bin/spark-submit  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.3     --master local[2]   --driver-class-path logging/        --class x.KafkaStructuredStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  'clickstream'
+$ ~/dev/spark/bin/spark-submit  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.3     --master local[2]   --driver-class-path logging/        --class x.KafkaStructuredStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  'clickstream'
 
 ```
 

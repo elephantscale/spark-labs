@@ -17,7 +17,7 @@ None
 ## STEP 1: Edit source file
 Go to the project root directory
 ```bash
-    $    cd ~/spark-labs/08-streaming/8.2-window
+    $    cd ~/dev/spark-labs/08-streaming/8.2-window
 ```
 
 **Inspect file : `src/main/scala/x/WindowedCount.scala`**  
@@ -61,7 +61,7 @@ Open an terminal and run this command at prompt
 
 ## STEP 4: Run The Application  (Terminal #1)
 ```bash
-    $   ~/spark/bin/spark-submit  --master local[2] \
+    $   ~/dev/spark/bin/spark-submit  --master local[2] \
       --driver-class-path logging/  \
       --class x.WindowedCount \
       target/scala-2.11/windowedcount_2.11-1.0.jar
@@ -96,7 +96,7 @@ You should see something similar to this screen shot.
 **==> Build and run the program**
 ```bash
     $   sbt package
-    $    ~/spark/bin/spark-submit  --master local[2]   \
+    $    ~/dev/spark/bin/spark-submit  --master local[2]   \
         --driver-class-path logging/  \
         --class x.WindowedCount \
         target/scala-2.11/windowed-count_2.11-1.0.jar

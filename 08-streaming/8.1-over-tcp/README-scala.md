@@ -17,7 +17,7 @@ None
 
 ## STEP 1: Go to project directory
 ```bash
-    $    cd ~/spark-labs/08-streaming/8.1-over-tcp
+    $    cd ~/dev/spark-labs/08-streaming/8.1-over-tcp
 ```
 
 
@@ -36,7 +36,7 @@ We will use `sbt` to build the project.
 **=> Build the project**
 ```bash
     # be in project root dir
-    $   cd ~/spark-labs/08-streaming/8.1-over-tcp  
+    $   cd ~/dev/spark-labs/08-streaming/8.1-over-tcp  
     $   sbt package
     # to do a clean rebuild use
     #  sbt clean package
@@ -75,9 +75,9 @@ Open an terminal and run this command at prompt
 
 ```bash
     # be in project root directory
-    $  cd  ~/spark-labs/08-streaming/8.1-over-tcp
+    $  cd  ~/dev/spark-labs/08-streaming/8.1-over-tcp
 
-    $   ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
+    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
 ```
 
 Lets call this Terminal #1
@@ -119,9 +119,9 @@ You should see something similar to this screen shot.
 **==> Compile and run the code**
 
 ```bash
-    $   cd ~/spark-labs/08-streaming/8.1-over-tcp  
+    $   cd ~/dev/spark-labs/08-streaming/8.1-over-tcp  
     $   sbt package
-    $   ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar    
+    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar    
 ```
 
 Using 'netcat' program, send some data to streaming.  Make sure some data has 'blocked' text
@@ -148,7 +148,7 @@ Output may look like this:
 **=> Build and run the program**
 ```bash
     $   sbt package
-    $   ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
+    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
 ```
 
 **=> Send some data through netcat window (terminal #2)**
@@ -205,7 +205,7 @@ Files
 
 ```bash
     $   sbt package
-    $   ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
+    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
 ```
 
 **==> Test with this clickstream data, using netcat window**
@@ -224,7 +224,7 @@ Files
 **==> Compile and run it**
 ```bash
     $   sbt package
-    $   ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.NetworkWordCount target/scala-2.11/over-tcp_2.11-1.0.jar
+    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.NetworkWordCount target/scala-2.11/over-tcp_2.11-1.0.jar
 ```
 
 **==> Test with data using NC**

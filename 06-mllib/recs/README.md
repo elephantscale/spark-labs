@@ -37,8 +37,8 @@ Here is what the file looks like:
 ### Step 2 : Start Spark Shell
 
 ```bash
-    $    cd  ~/spark-labs/6-mllib/recs
-    $    ~/spark/bin/spark-shell
+    $    cd  ~/dev/spark-labs/6-mllib/recs
+    $    ~/dev/spark/bin/spark-shell
 ```
 
 ### Step 3 : Execute the recommendation script
@@ -48,7 +48,7 @@ We recommend you run the **dating_solution.scala** file step by step to understa
 
 ### Step 4:  Transform the Rating object to a tuple of User, Item
 
-    $    cd  ~/spark-labs/6-mllib/recs
+    $    cd  ~/dev/spark-labs/6-mllib/recs
     
     ## edit the file  dating.scala
     $  vi dating.scala
@@ -77,7 +77,7 @@ The second one is as follows:
 
 ### Step 6: Running the data
 
-    ~/spark/bin/spark-shell -i dating.scala
+    ~/dev/spark/bin/spark-shell -i dating.scala
 
 
 Once you run this, the recommendations for all users will be put in an array

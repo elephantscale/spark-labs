@@ -8,7 +8,7 @@
 
 ``` bash
     # change MYNAME
-    $  cd  ~/spark-labs/scripts/
+    $  cd  ~/dev/spark-labs/scripts/
 
     $  ./setup-clickstream.sh
 ```
@@ -19,7 +19,7 @@
 ## 3 - Jupyter server start
 
 ``` bash
-PYSPARK_PYTHON=python3 PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS=notebook ~/spark/bin/pyspark
+PYSPARK_PYTHON=python3 PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS=notebook ~/dev/spark/bin/pyspark
 
 ```
 Access http://URL:8888

@@ -25,7 +25,7 @@ Execute the following in terminal to update the labs
 ## Step 3 : Open Lab Instructions in Chrome
 * Start Chrome
 * `Ctrl+0` to open file
-* Navigate to `~/spark-labs/` and select `README.md`
+* Navigate to `~/dev/spark-labs/` and select `README.md`
 
 <img src="assets/images/setup1e-ubuntu-desktop.png" style="border: 5px solid grey ; max-width:100%;" />
 <img src="assets/images/setup1c.png" style="border: 5px solid grey ; max-width:100%;" />
