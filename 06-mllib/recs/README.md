@@ -15,8 +15,8 @@ In our example, we're going to ignore the gender and orientation of each user in
 The checked in version is a tiny subset of the actual, as only the first 9999 users are included.  Furthermore, the ratings outside the subset are ignored, so a good portion of users have no data.
 
 ### Step 1 : Inspect Data
-* Sample Data : [data/dating/sample.txt](../../data/dating/sample.txt)
-* Rating data file : [data/dating/ratings.txt](../../data/dating/ratings.txt)
+* Sample Data : [/data/dating/sample.txt](/data/dating/sample.txt)
+* Rating data file : [/data/dating/ratings.txt](/data/dating/medium/ratings.dat)
 
 (browsers may not display the data properly, open the data in text editor)
 
@@ -37,18 +37,18 @@ Here is what the file looks like:
 ### Step 2 : Start Spark Shell
 
 ```bash
-    $    cd  ~/spark-labs/6-mllib/recs
-    $    ~/spark/bin/spark-shell
+    $    cd  ~/dev/spark-labs/6-mllib/recs
+    $    ~/dev/spark/bin/spark-shell
 ```
 
 ### Step 3 : Execute the recommendation script
-We recommend you run the [dating_solution.scala](dating_solution.scala) file step by step to understand what is going on.  This is a complete solution file.
+We recommend you run the **dating_solution.scala** file step by step to understand what is going on.  This is a complete solution file.
 
 [_Optional_] You may choose to edit the file [dating.scala](dating.scala) and complete TODO items and run it as well.
 
-### Step 1:  Transform the Rating object to a tuple of User, Item
+### Step 4:  Transform the Rating object to a tuple of User, Item
 
-    $    cd  ~/spark-labs/6-mllib/recs
+    $    cd  ~/dev/spark-labs/6-mllib/recs
     
     ## edit the file  dating.scala
     $  vi dating.scala
@@ -66,7 +66,7 @@ The first one is as follows:
 
 val usersItems = ???? // TODO complete this item
 
-###Step 2:   Use the predict method to map the outpu to user,item
+### Step 5:   Use the predict method to map the outpu to user,item
 The second one is as follows:
 
     // Do a test prediction
@@ -75,9 +75,9 @@ The second one is as follows:
     
     val recs = ??? // TODO:  COMPLETE THIS
 
-### Step 3: Running the data
+### Step 6: Running the data
 
-    ~/spark/bin/spark-shell -i dating.scala
+    ~/dev/spark/bin/spark-shell -i dating.scala
 
 
 Once you run this, the recommendations for all users will be put in an array
@@ -90,7 +90,7 @@ res4: Array[Int] = Array(7964, 6499, 6269, 9287)
 
 Beware: some numbers aren't represented (e.g. 3)
 
-### Step 4: Running on some of your own data
+### Step 7: Running on some of your own data
 
 Create a file called personalratings.txt.  Include some test data as preferences.
 We have included a samle personalratings.txt for you you can refer to it.

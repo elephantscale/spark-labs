@@ -11,9 +11,9 @@ out*
 *.out
 *.csv
 *.json
-*solution*
 ~*
 *~
+*.html
 
 metastore_db/
 

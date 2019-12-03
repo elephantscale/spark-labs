@@ -18,9 +18,8 @@ None
 
 ## STEP 1: Go to project directory
 ```bash
-    $    cd ~/spark-labs/08-streaming/8.4-structured
+    $    cd ~/dev/spark-labs/08-streaming/8.4-structured
 ```
-
 
 ## Step 2 : Inspect file
 **Inspect file : `src/main/scala/x/JSONStreaming.scala`**  
@@ -33,7 +32,7 @@ Delete /\*  and \*/
 ```scala
     // TODO-1
     // figure out clickstream schema using sample file
-    val sample = spark.read.json("clickstream.json")
+    val sample = spark.read.json("file:///data/click-stream/clickstream.json")
     sample.printSchema
     val schema = sample.schema
     println ("Clickstream sample schema is : " + schema)
@@ -46,7 +45,7 @@ Save the file.
 
 ```bash
     # be in project root directory
-    $  cd ~/spark-labs/08-streaming/8.4-structured
+    $  cd ~/dev/spark-labs/08-streaming/8.4-structured
     $  sbt clean package
 ```
 
@@ -57,11 +56,11 @@ Make sure there are no errors and there is output in `target` dir.
 
 ```bash
     # be in project root directory
-    $   cd ~/spark-labs/08-streaming/8.4-structured
+    $   cd ~/dev/spark-labs/08-streaming/8.4-structured
 
     $   rm -f json-input/*
 
-    $  ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
+    $  ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
 ```
 
 Note : `rm -f json-input/*`  is used to clear the input directory
@@ -84,16 +83,16 @@ Clickstream sample schema is : StructType(StructField(action,StringType,true), S
 
 ## Step 6:  Fix TODO-2
 Edit file : `src/main/scala/x/JSONStreaming.scala`**  
-And fix TODO-2.  Uncomment to 'TODO-2' block
+And fix TODO-2.  Uncomment 'TODO-2' block
 
 ```bash
     # be in project root directory
-    $   cd ~/spark-labs/08-streaming/8.4-structured
+    $   cd ~/dev/spark-labs/08-streaming/8.4-structured
 
     $   sbt clean package
 
     $   rm -f json-input/*  ;  
-        ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
+        ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
 ```
 
 Leave this terminal running (we will call it Spark terminal)
@@ -101,9 +100,9 @@ Leave this terminal running (we will call it Spark terminal)
 Open another terminal and issue the following commands.
 
 ```bash
-    $   cd ~/spark-labs/08-streaming/8.4-structured
+    $   cd ~/dev/spark-labs/08-streaming/8.4-structured
 
-    $   ln clickstream.json    json-input/1.json
+    $   ln /data/click-stream/clickstream.json json-input/1.json
 ```
 
 In Spark terminal you should see the first batch output
@@ -133,7 +132,7 @@ You should see something similar to this screen shot.
 ## Step 7 : TODO-3 / Query1
 
 Edit file : `src/main/scala/x/JSONStreaming.scala`**  
-And fix TODO-2.  Uncomment to 'TODO-3' block, un commenting the following section
+And fix TODO-3.  Uncomment 'TODO-3' block, 
 
 ```scala
 // TODO-3 - query1 : aggregate query
@@ -149,20 +148,19 @@ Build and run streaming application
 
 ```bash
     # be in project root directory
-    $   cd ~/spark-labs/08-streaming/8.4-structured
+    $   cd ~/dev/spark-labs/08-streaming/8.4-structured
 
     $   sbt clean package
 
     $   rm -f json-input/*  ;  
-        ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
+        ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
 ```
 
 Copy files into `json-input` directory as follows.
 
 ```bash
-    $   cd ~/spark-labs/08-streaming/8.4-structured
-
-    $   ln clickstream.json    json-input/1.json
+    $   cd ~/dev/spark-labs/08-streaming/8.4-structured
+    $   ln /data/click-stream/clickstream.json json-input/1.json
 ```
 
 
@@ -206,15 +204,15 @@ Copy more files and see the `domain count` change
 
 ```bash
 
-    $   ln clickstream.json    json-input/2.json
-    $   ln clickstream.json    json-input/3.json
+    $   ln /data/click-stream/clickstream.json  json-input/2.json
+    $   ln /data/click-stream/clickstream.json  json-input/3.json
 ```
 
 **=>  Hit Ctrl+C  on terminal #1 to kill Spark streaming application**
 
 ## Step 8 : TODO-4  / Query2
 Edit file : `src/main/scala/x/JSONStreaming.scala`**  
-Uncomment to 'TODO-4' block, un-commenting the following section
+Uncomment 'TODO-4' block, 
 
 ```scala
 
@@ -232,22 +230,21 @@ Build and run streaming application
 
 ```bash
     # be in project root directory
-    $   cd ~/spark-labs/08-streaming/8.4-structured
+    $   cd ~/dev/spark-labs/08-streaming/8.4-structured
 
     $   sbt clean package
 
     $   rm -f json-input/*  ;  
-        ~/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
+        ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
 ```
 
 Copy files into `json-input` directory as follows.
 
 ```bash
-    $   cd ~/spark-labs/08-streaming/8.4-structured
-
-    $   ln clickstream.json    json-input/1.json
-    $   ln clickstream.json    json-input/2.json
-    $   ln clickstream.json    json-input/3.json
+$ cd ~/dev/spark-labs/08-streaming/8.4-structured
+$ ln /data/click-stream/clickstream.json  json-input/1.json
+$ ln /data/click-stream/clickstream.json  json-input/2.json
+$ ln /data/click-stream/clickstream.json  json-input/3.json
 ```
 
 

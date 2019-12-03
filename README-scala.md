@@ -65,16 +65,16 @@ The VMs already have data loaded.  This for your own reference.
 
 
 ### 5 - API
-- [5.1 - Submit first application](05.1-api-scala/5.1-submit.md)
-- BONUS :  [5.2 - Mapreduce using API](05.1-api-scala/5.2-mapreduce.md)
+- [5.1 - Submit first application](05-api/5.1-submit.md)
+- BONUS :  [5.2 - Mapreduce using API](05-api/5.2-mapreduce.md)
 
 ### Practice Labs for end of day 2
 - [Practice Lab 1 - Analyze Spark Commit logs](practice-labs/commit-logs-scala.md)
-- [Practice Lab 2 - Optimize SQL query](practice-labs/optimize-query-scala.md)
+- (If time permits) [Practice Lab 3 - Optimize SQL query](practice-labs/optimize-query-scala.md)
 
 
 ### 6 - MLLib
-- [6.1 - Kmeans](06-mllib/kmeans/README.md)
+- [6.1 - Kmeans](06-mllib/kmeans/kmeans-scala.md)
 - [6.2 - Recommendations](06-mllib/recs/README.md)
 - [6.3 - Classification](06-mllib/classification/README.md)
 
@@ -83,27 +83,28 @@ The VMs already have data loaded.  This for your own reference.
 - [7.2  - Shortest path (in LinkedIn)](07-graphx/7.2-shortest-path.md)
 
 ### 8 - Streaming
-- [8.1 - Streaming over TCP](08-streaming/8.1-over-tcp/README.md)
-- [8.2 - Windowed Count](08-streaming/8.2-window/README.md)
-- 8.3 - Kafka Streaming
-    * [8.3a - Kafka Direct Streaming](08-streaming/8.3-kafka/README.md)
-    * [8.3b - Kafka Structured Streaming](08-streaming/8.3-kafka/3-kafka-structured-streaming.md)
+- [8.1 - Streaming over TCP](08-streaming/8.1-over-tcp/README-scala.md)
+- [8.2 - Windowed Count](08-streaming/8.2-window/README-scala.md)
+- [8.3 - Kafka Streaming](08-streaming/8.3-kafka/README-scala.md)
+    * [8.3a - Kafka-setup](08-streaming/8.3-kafka/kafka-setup-scala.md)
+    * [8.3b - Kafka Direct Streaming](08-streaming/8.3-kafka/kafka-direct-streaming-scala.md)
+    * [8.3c - Kafka Structured Streaming](08-streaming/8.3-kafka/kafka-structured-streaming-scala.md)
 - 8.4 - Structured Streaming
-    * [8.4a - Structured Streaming 1](08-streaming/8.4-structured/README.md)
-    * [8.4b - Structured Streaming 2 (JSON)](08-streaming/8.4-structured/README2.md)
+    * [8.4a - Structured Streaming 1](08-streaming/8.4-structured/README1-scala.md)
+    * [8.4b - Structured Streaming 2 (JSON)](08-streaming/8.4-structured/README2-scala.md)
 
 ### 9 - Operations
 - [9.1 - Cluster setup](09-ops/9.1-cluster-setup.md)
 
 ### 10 - Spark and Hadoop (all the Hadoop labs are grouped here)
 - [2.2H - Spark Shell on Hadoop](02-intro/2.2H-spark-shell-hadoop.md)
-- [3.1 - Loading RDDs from HDFS](03-rdd/3.1-rdd-basics.md)
-- [4.2 - Spark SQL on Hadoop](04-dataframe/4.2-sql.md)
-- [4.4H - Spark & Hive](04-dataframe/4.4-spark-and-hive.md)
+- [3.1 - Loading RDDs from HDFS](03-rdd/3.1-rdd-basics-scala.md)
+- [4.2 - Spark SQL on Hadoop](04-dataframe/4.2-sql-scala.md)
+- [4.4H - Spark & Hive](04-dataframe/4.5-spark-and-hive-scala.md)
 
 
-### Practice Labs 
+### Practice Labs
 - [Practice Lab 1 - Analyze Spark Commit logs](practice-labs/commit-logs-scala.md)
-- [Practice Lab 2 - Optimize SQL query](practice-labs/optimize-query-scala.md)
-- [Practice Lab 3 - Analyze house sales data](practice-labs/house-sales-scala.md)
-- [Practice Lab 3 - Analyze clickstream data](practice-labs/clickstream-scala.md)
+- [Practice Lab 2 - Analyze house sales data](practice-labs/house-sales-scala.md)
+- [Practice Lab 3 - Optimize SQL query](practice-labs/optimize-query-scala.md)
+- [Practice Lab 4 - Analyze clickstream data](practice-labs/clickstream-scala.md)
