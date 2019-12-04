@@ -19,6 +19,8 @@ if len(sys.argv) < 2:
 ## TODO-1: Give a name
 spark = SparkSession.builder.appName("Process Clickstream -- MYNAME").getOrCreate()
 
+print('### Spark UI available on port : ' + spark.sparkContext.uiWebUrl.split(':')[2])
+
 f = sys.argv[1]
 
 ## TODO-2 : Load json data
