@@ -1,0 +1,36 @@
+## How to assemble labs
+##    $ES_HOME/utils/labs/labs-assembler2.sh  assembly.txt
+
+
+## From this dir
+01-scala
+02-intro
+03-rdd
+04-dataframe
+05-api
+06-mllib
+07-graphx
+08-streaming
+09-ops
+README-python.ipynb
+README-scala-old.md
+README-scala.md
+README.md
+testing-123.ipynb
+assets
+edit-files.md
+init_spark.py
+java
+lab-assembly.txt
+practice-labs
+run-jupyter.sh
+scripts
+setup-hadoop.md
+setup-local.ipynb
+setup-python.ipynb
+setup1.md
+
+## from other repos
+$ES_HOME/python-labs/python-basics
+$ES_HOME/python-labs/0-testing/hello-jupyter.ipynb  python-basics/
+

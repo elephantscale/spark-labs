@@ -10,16 +10,15 @@ Create a lab bundle as follows
     $    ./package-labs.sh
 ```
 
-# Download Labs
-```
-    $   git clone  --depth 1 git@github.com:elephantscale/spark-labs.git
-```
+# Labs
+Instructor will provide lab bundle
+
 
 # Download Data
 The VMs already have data loaded.  This for your own reference.
 
 [Link to Full Dataset](https://s3.amazonaws.com/elephantscale-public/data/datasets.zip)
-(Note: Large download, ~200 Meg)
+(Note: Large download, ~300 Meg)
 
 - Click the above link to download or
 - use `wget` from command line
@@ -47,13 +46,8 @@ The VMs already have data loaded.  This for your own reference.
 
 ### 3 - RDDs & Datasets
 - [3.1 - RDD basics](03-rdd/3.1-rdd-basics-scala.md)
-- [3.1b - Dataset basics](03-rdd/3.1b-dataset-basics-scala.md)
-- [3.6 - Caching](03-rdd/3.6-caching-scala.md)
-- **Optional RDD labs provided for reference (not done in class)**
-    - [3.4 - Map Reduce](03-rdd/3.4-mapreduce.md)
-    - [3.5 - Clickstream processing](03-rdd/3.5-clickstream.md)
-    - [3.2 - Working with multiple RDDs](03-rdd/3.2-rdd-multi.md)
-    - [3.3 - Key Value Pairs](03-rdd/3.3-key-value.md)
+- [3.2 - Dataset basics](03-rdd/3.2-dataset-basics-scala.md)
+- [3.3 - Caching](03-rdd/3.3-caching-scala.md)
 
 ### 4 - Dataframes and Datasets
 - [4.1 - Dataframes](04-dataframe/4.1-dataframe-scala.md)

@@ -1,3 +1,4 @@
 #!/bin/bash
 
-$ES_HOME/utils/labs/package-labs.sh "$@"
+$ES_HOME/utils/labs/labs-assembler.sh  lab-assembly.txt  $@
+
