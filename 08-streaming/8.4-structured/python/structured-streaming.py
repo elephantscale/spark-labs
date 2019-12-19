@@ -11,6 +11,8 @@ spark = SparkSession \
 # Set loglevel to Error
 spark.sparkContext.setLogLevel("ERROR")
 
+print('### Spark UI available on port : ' + spark.sparkContext.uiWebUrl.split(':')[2])
+
 """
 ## TODO-1 : read from socket 10000
 lines = spark \
@@ -28,6 +30,8 @@ query1 = lines \
 
 # query1.awaitTermination()
 
+# END TODO-1
+"""
 
 
 ## TODO-2  :filter lines that has 'x'

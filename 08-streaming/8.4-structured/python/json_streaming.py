@@ -10,6 +10,8 @@ spark = SparkSession \
 # Set loglevel to Error
 spark.sparkContext.setLogLevel("ERROR")
 
+print('### Spark UI available on port : ' + spark.sparkContext.uiWebUrl.split(':')[2])
+
 """
 # TODO-1 :	
 sample_data = spark.read.json("file:///data/click-stream/clickstream.json")

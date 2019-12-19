@@ -3,6 +3,8 @@ from pyspark.streaming import StreamingContext
 
 sc = SparkContext("local[2]", "OverTCP")
 
+print('### Spark UI available on port : ' + sc.uiWebUrl.split(':')[2])
+
 ## TODO-1 : Create a streaming context with 5 second
 ## batch interval
 ## Hint : 5

@@ -5,6 +5,8 @@ from operator import add
 # Create a local StreamingContext with two working thread and batch interval of 1 second
 sc = SparkContext("local[2]", "NetworkWordCount")
 
+print('### Spark UI available on port : ' + sc.uiWebUrl.split(':')[2])
+
 ssc = StreamingContext(sc, 10)
 
 ## TODO-1: listen on port 10000, only cache it local memory

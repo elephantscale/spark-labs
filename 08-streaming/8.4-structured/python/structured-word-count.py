@@ -11,6 +11,8 @@ spark = SparkSession \
 # Set loglevel to Error
 spark.sparkContext.setLogLevel("ERROR")
 
+print('### Spark UI available on port : ' + spark.sparkContext.uiWebUrl.split(':')[2])
+
 lines = spark \
     .readStream \
     .format("socket") \

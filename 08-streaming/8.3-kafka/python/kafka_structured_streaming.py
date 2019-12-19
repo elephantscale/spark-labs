@@ -13,6 +13,8 @@ spark = SparkSession \
     .appName("KafkaStructuredStreaming") \
     .getOrCreate()
 
+print('### Spark UI available on port : ' + spark.sparkContext.uiWebUrl.split(':')[2])
+
 sc = spark.sparkContext
 sc.setLogLevel("WARN")
 
