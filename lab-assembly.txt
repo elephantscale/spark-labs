@@ -13,9 +13,8 @@
 08-streaming
 09-ops
 README-python.ipynb
-README-scala-old.md
 README-scala.md
-README.md
+README.txt
 testing-123.ipynb
 assets
 edit-files.md
