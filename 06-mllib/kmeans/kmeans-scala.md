@@ -37,7 +37,7 @@ We are going to fix these TODO items and run the script **line-by-line** in Spar
 ## Step 3 : Launch Spark Shell
 ```bash
     # start shell
-    $  ~/dev/spark/bin/spark-shell
+    $  ~/apps/spark/bin/spark-shell
 ```
 ### Download the [spreadsheet](WSSSE-versus-k.xlsx)
 
@@ -60,7 +60,7 @@ Once you fix TODO items in the script, we can run the entire script as follows
 
 ```bash
     # supply the file to run with -i flag
-    $ ~/dev/spark/bin/spark-shell -i ~/dev/spark-labs/06-mllib/kmeans/kmeans_mtcars.scala
+    $ ~/apps/spark/bin/spark-shell -i ~/dev/spark-labs/06-mllib/kmeans/kmeans_mtcars.scala
 ```
 
 **Hint**
@@ -84,7 +84,7 @@ make up some fictitious cars).
 
 Then run the script again.
 ```
-$ time  ~/dev/spark/bin/spark-shell -i kmeans_mtcars.scala  2> logs
+$ time  ~/apps/spark/bin/spark-shell -i kmeans_mtcars.scala  2> logs
 ```
 
 See how adding this affects the way the data is clustered?

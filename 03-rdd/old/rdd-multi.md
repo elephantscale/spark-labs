@@ -45,7 +45,7 @@ Hints
 ### Step 1: start spark shell
 
 ```
-    $   ~/dev/spark/bin/spark-shell
+    $   ~/apps/spark/bin/spark-shell
 ```
 
 ### Step 2: create data sets using parallelize() method

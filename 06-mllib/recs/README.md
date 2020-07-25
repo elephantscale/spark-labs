@@ -38,7 +38,7 @@ Here is what the file looks like:
 
 ```bash
     $    cd  ~/dev/spark-labs/6-mllib/recs
-    $    ~/dev/spark/bin/spark-shell
+    $    ~/apps/spark/bin/spark-shell
 ```
 
 ### Step 3 : Execute the recommendation script
@@ -77,7 +77,7 @@ The second one is as follows:
 
 ### Step 6: Running the data
 
-    ~/dev/spark/bin/spark-shell -i dating.scala
+    ~/apps/spark/bin/spark-shell -i dating.scala
 
 
 Once you run this, the recommendations for all users will be put in an array

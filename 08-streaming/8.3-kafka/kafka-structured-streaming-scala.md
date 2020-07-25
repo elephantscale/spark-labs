@@ -61,7 +61,7 @@ Here is the screen shot (click on image to see full size image)
 
 **=> Launch kafka streaming application as follows**  
 ```bash
-  $ ~/dev/spark/bin/spark-submit  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.3    --master local[2]   --driver-class-path logging/        --class x.KafkaStructuredStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  'clickstream'
+  $ ~/apps/spark/bin/spark-submit  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.3    --master local[2]   --driver-class-path logging/        --class x.KafkaStructuredStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  'clickstream'
 ```
 
 Parameters explained:
@@ -115,7 +115,7 @@ $ sbt clean compile
 
 $ sbt assembly
 
-$ ~/dev/spark/bin/spark-submit  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.3     --master local[2]   --driver-class-path logging/        --class x.KafkaStructuredStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  'clickstream'
+$ ~/apps/spark/bin/spark-submit  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.4.3     --master local[2]   --driver-class-path logging/        --class x.KafkaStructuredStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  'clickstream'
 
 ```
 

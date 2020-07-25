@@ -59,7 +59,7 @@ Make sure there are no errors and there is output in `target` dir.
 
     $   rm -f json-input/*
 
-    $  ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
+    $  ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
 ```
 
 Note : `rm -f json-input/*`  is used to clear the input directory
@@ -91,7 +91,7 @@ And fix TODO-2.  Uncomment 'TODO-2' block
     $   sbt clean package
 
     $   rm -f json-input/*  ;  
-        ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
+        ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
 ```
 
 Leave this terminal running (we will call it Spark terminal)
@@ -152,7 +152,7 @@ Build and run streaming application
     $   sbt clean package
 
     $   rm -f json-input/*  ;  
-        ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
+        ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
 ```
 
 Copy files into `json-input` directory as follows.
@@ -234,7 +234,7 @@ Build and run streaming application
     $   sbt clean package
 
     $   rm -f json-input/*  ;  
-        ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
+        ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSONStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
 ```
 
 Copy files into `json-input` directory as follows.

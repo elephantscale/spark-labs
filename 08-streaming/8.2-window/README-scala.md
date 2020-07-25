@@ -61,7 +61,7 @@ Open an terminal and run this command at prompt
 
 ## STEP 4: Run The Application  (Terminal #1)
 ```bash
-    $   ~/dev/spark/bin/spark-submit  --master local[2] \
+    $   ~/apps/spark/bin/spark-submit  --master local[2] \
       --driver-class-path logging/  \
       --class x.WindowedCount \
       target/scala-2.11/windowedcount_2.11-1.0.jar
@@ -96,7 +96,7 @@ You should see something similar to this screen shot.
 **==> Build and run the program**
 ```bash
     $   sbt package
-    $    ~/dev/spark/bin/spark-submit  --master local[2]   \
+    $    ~/apps/spark/bin/spark-submit  --master local[2]   \
         --driver-class-path logging/  \
         --class x.WindowedCount \
         target/scala-2.11/windowed-count_2.11-1.0.jar

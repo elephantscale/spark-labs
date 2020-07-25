@@ -58,7 +58,7 @@ Open an terminal and run this command at prompt
     # be in project root directory
     $ cd ~/dev/spark-labs/08-streaming/8.4-structured
 
-    $   ~/dev/spark/bin/spark-submit  --master local[2]   \
+    $   ~/apps/spark/bin/spark-submit  --master local[2]   \
         --driver-class-path logging/  \
         --class x.StructuredStreaming  \
         target/scala-2.11/structured-streaming_2.11-1.0.jar

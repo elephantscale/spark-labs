@@ -77,7 +77,7 @@ Here is the screen shot (click on image to see full size image)
 
 **=> Launch kafka streaming application as follows**  
 ```bash
-  $    ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.KafkaDirectStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  localhost:9092  clickstream
+  $    ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.KafkaDirectStreaming  target/scala-2.11/kafka-streaming-assembly-1.0.jar  localhost:9092  clickstream
 ```
 
 Parameters explained:

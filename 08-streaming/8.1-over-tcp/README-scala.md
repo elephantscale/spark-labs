@@ -77,7 +77,7 @@ Open an terminal and run this command at prompt
     # be in project root directory
     $  cd  ~/dev/spark-labs/08-streaming/8.1-over-tcp
 
-    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
+    $   ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
 ```
 
 Lets call this Terminal #1
@@ -121,7 +121,7 @@ You should see something similar to this screen shot.
 ```bash
     $   cd ~/dev/spark-labs/08-streaming/8.1-over-tcp  
     $   sbt package
-    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar    
+    $   ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar    
 ```
 
 Using 'netcat' program, send some data to streaming.  Make sure some data has 'blocked' text
@@ -148,7 +148,7 @@ Output may look like this:
 **=> Build and run the program**
 ```bash
     $   sbt package
-    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
+    $   ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
 ```
 
 **=> Send some data through netcat window (terminal #2)**
@@ -205,7 +205,7 @@ Files
 
 ```bash
     $   sbt package
-    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
+    $   ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.OverTCP target/scala-2.11/over-tcp_2.11-1.0.jar
 ```
 
 **==> Test with this clickstream data, using netcat window**
@@ -224,7 +224,7 @@ Files
 **==> Compile and run it**
 ```bash
     $   sbt package
-    $   ~/dev/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.NetworkWordCount target/scala-2.11/over-tcp_2.11-1.0.jar
+    $   ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.NetworkWordCount target/scala-2.11/over-tcp_2.11-1.0.jar
 ```
 
 **==> Test with data using NC**
