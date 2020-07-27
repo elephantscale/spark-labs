@@ -26,7 +26,7 @@ run-jupyter.sh
 scripts
 setup-hadoop.md
 setup-local.ipynb
-setup-python.ipynb
+setup-vm-python.ipynb
 setup1.md
 
 ## from other repos
