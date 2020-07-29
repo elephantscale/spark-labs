@@ -5,7 +5,7 @@
 ## leave this line commented out (do not over-ride the default path)
 
 #export PATH=$HOME/anaconda3/bin:$PATH
-export SPARK_HOME=$HOME/spark
+export SPARK_HOME=$HOME/apps/spark
 jupyter lab
 
 ## --- older approach ---
