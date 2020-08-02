@@ -32,7 +32,7 @@ for file in sys.argv[1:]:
     count = f.???()
     t2 = time.perf_counter()
 
-    print("### {}: count:  {} ,  time took:  {:,.2f} ms".format(file, count, (t2-t1)*1000))
+    print("### {}: count:  {:,} ,  time took:  {:,.2f} ms".format(file, count, (t2-t1)*1000))
 
     # end of for loop
 
