@@ -1,5 +1,4 @@
-## How to assemble labs
-##    $ES_HOME/utils/labs/labs-assembler2.sh  assembly.txt
+##    ./assemble-labs.sh
 
 
 ## From this dir
