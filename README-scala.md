@@ -66,8 +66,8 @@ The VMs already have data loaded.  This for your own reference.
 
 ### 5 - API
 
-- [5.1 - Submit first application](05-api/5.1-submit.md)
-- BONUS :  [5.2 - Mapreduce using API](05-api/5.2-mapreduce.md)
+- [5.1 - Submit first application](05-api/5.1-submit-scala.md)
+- BONUS :  [5.2 - Mapreduce using API](05-api/5.2-mapreduce-scala.md)
 
 ### Practice Labs for end of day 2
 
@@ -83,8 +83,8 @@ The VMs already have data loaded.  This for your own reference.
 
 ### 7 - GraphX
 
-- [7.1  - Influencers (Twitter)](07-graphx/7.1-influencer.md)
-- [7.2  - Shortest path (in LinkedIn)](07-graphx/7.2-shortest-path.md)
+- [7.1  - Influencers (Twitter)](07-graphx/7.1-influencer-scala.md)
+- [7.2  - Shortest path (in LinkedIn)](07-graphx/7.2-shortest-path-scala.md)
 
 ### 8 - Streaming
 

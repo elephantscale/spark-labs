@@ -12,3 +12,8 @@ libraryDependencies ++= Seq(
 "com.github.scala-incubator.io" %% "scala-io-file" % "0.4.3"
 )
 
+// ignore files in .ipynb_checkpoints
+excludeFilter in (Compile, unmanagedSources) ~= { _ ||
+  new FileFilter {
+    def accept(f: File) = f.getPath.containsSlice("/.ipynb_checkpoints/")
+  } }
