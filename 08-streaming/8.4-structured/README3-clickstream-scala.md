@@ -1,9 +1,8 @@
 <link rel='stylesheet' href='../../assets/css/main.css'/>
 
-[<< back to main index](../../README-scala.md)
 
-Lab 8.4 - Structured Streaming 2 (JSON)
-==================================
+# Lab - Structured Streaming 3 - Clickstream
+
 
 ### Overview
 Run a Spark Structured Streaming  job analyzing JSON data
@@ -131,7 +130,7 @@ You should see something similar to this screen shot.
 ## Step 7 : TODO-3 / Query1
 
 Edit file : `src/main/scala/x/JSONStreaming.scala`**  
-And fix TODO-3.  Uncomment 'TODO-3' block,
+And fix TODO-3.  Uncomment 'TODO-3' block, 
 
 ```scala
 // TODO-3 - query1 : aggregate query
@@ -211,7 +210,7 @@ Copy more files and see the `domain count` change
 
 ## Step 8 : TODO-4  / Query2
 Edit file : `src/main/scala/x/JSONStreaming.scala`**  
-Uncomment 'TODO-4' block,
+Uncomment 'TODO-4' block, 
 
 ```scala
 
@@ -247,6 +246,6 @@ $ ln /data/click-stream/clickstream.json  json-input/3.json
 ```
 
 
-**=>  Can you explain how `append` mode works for query2?**  
+**=>  Can you explain how `append` mode works for query2? **  
 
 **=>  Hit Ctrl+C  on terminal #1 to kill Spark streaming application**

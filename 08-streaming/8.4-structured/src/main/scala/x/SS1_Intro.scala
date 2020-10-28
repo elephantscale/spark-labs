@@ -10,7 +10,7 @@ $  spark-submit  --master local[2]   --driver-class-path logging/  --class x.Str
  */
 
 
-object StructuredStreaming {
+object SS1_Intro {
   def main(args: Array[String]) {
 
     val spark = SparkSession.builder.appName("Structured Streaming").
@@ -19,11 +19,11 @@ object StructuredStreaming {
     // TODO-1  : set the port to 10000
     val clickstream = spark.readStream.format("socket").
                       option("host", "localhost").
-                      option("port", ???)
+                      option("port", 10000)
                       .load()
 
     // TODO-2 : printSchema
-    clickstream.???
+    clickstream.printSchema
 
     val query = clickstream.writeStream.
                 outputMode("append")

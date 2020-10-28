@@ -16,7 +16,6 @@ Create a lab bundle as follows
 
 Instructor will provide lab bundle
 
-
 # Download Data
 
 The VMs already have data loaded.  This for your own reference.
@@ -88,15 +87,20 @@ The VMs already have data loaded.  This for your own reference.
 
 ### 8 - Streaming
 
-- [8.1 - Streaming over TCP](08-streaming/8.1-over-tcp/README-scala.md)
-- [8.2 - Windowed Count](08-streaming/8.2-window/README-scala.md)
-- [8.3 - Kafka Streaming](08-streaming/8.3-kafka/README-scala.md)
-    * [8.3a - Kafka-setup](08-streaming/8.3-kafka/kafka-setup-scala.md)
-    * [8.3b - Kafka Direct Streaming](08-streaming/8.3-kafka/kafka-direct-streaming-scala.md)
-    * [8.3c - Kafka Structured Streaming](08-streaming/8.3-kafka/kafka-structured-streaming-scala.md)
-- 8.4 - Structured Streaming
-    * [8.4a - Structured Streaming 1](08-streaming/8.4-structured/README1-scala.md)
-    * [8.4b - Structured Streaming 2 (JSON)](08-streaming/8.4-structured/README2-scala.md)
+#### Structured Streaming 
+
+This is the new recommended API for streaming.  
+
+- [Structured Streaming 1 - Intro](08-streaming/8.4-structured/README1-intro-scala.md)
+- [Structured Streaming 2 - Word Count](08-streaming/8.4-structured/README2-wordcount-scala.md)
+- [Structured Streaming 3 - Clickstream](08-streaming/8.4-structured/README3-clickstream-scala.md)
+
+#### Classic Streaming 
+
+- [Streaming over TCP](08-streaming/8.1-over-tcp/README-scala.md)
+- [Windowed Count](08-streaming/8.2-window/README-scala.md)
+- [Kafka Streaming](08-streaming/8.3-kafka/README-scala.md)
+
 
 ### 9 - Operations
 
