@@ -31,6 +31,7 @@ object ProcessFiles {
                 appName("Process Files -- MYNAME").
                 getOrCreate()
 
+      /* 
     var file = ""
     for (file <- args) { // looping over files
       // ## TODO 2 : create an RDD out of file 
@@ -43,6 +44,8 @@ object ProcessFiles {
 
        println("### %s: count:  %,d ,  time took:  %,f ms".format(file, count, (t2-t1)/1e6))
       }
+      
+      */
 
       // HACK : so the 4040 UI stays alive :-)
       println("### Hit enter to terminate the program...:")

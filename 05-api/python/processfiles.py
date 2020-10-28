@@ -24,7 +24,7 @@ print('### Spark UI available on port : ' + spark.sparkContext.uiWebUrl.split(':
 for file in sys.argv[1:]:
     ## TODO-2 : read a file as dataset
     ## hint : spark.read.text(file)
-    #f = ???(file)
+    f = ???(file)
 
     t1 = time.perf_counter()
     ## TODO-3 : Count the number of lines
@@ -37,5 +37,12 @@ for file in sys.argv[1:]:
     # end of for loop
 
 
-line = input('### Hit Ctrl+C to terminate the program...')
+# line = input('### Hit Ctrl+C to terminate the program...')
+
+print("Press Enter to continue...")
+
+scanner = spark.sparkContext._gateway.jvm.java.util.Scanner
+sys_in = getattr(spark.sparkContext._gateway.jvm.java.lang.System, 'in')
+result = scanner(sys_in).nextLine()
+
 spark.stop()  # close the session

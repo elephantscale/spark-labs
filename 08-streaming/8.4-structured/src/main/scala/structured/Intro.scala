@@ -16,10 +16,11 @@ object Intro {
     val spark = SparkSession.builder.appName("Structured Streaming").
                 getOrCreate()
 
+      /*
     // TODO-1  : set the port to 10000
     val clickstream = spark.readStream.format("socket").
                       option("host", "localhost").
-                      option("port", 10000)
+                      option("port", ????)
                       .load()
 
     // TODO-2 : printSchema
@@ -31,6 +32,7 @@ object Intro {
                 .start()
 
     query.awaitTermination()
+    */
 
   }
 }
