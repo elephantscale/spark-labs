@@ -1,4 +1,4 @@
-package x
+package structured
 
 
 import org.apache.spark.sql.functions._
@@ -10,7 +10,7 @@ $  spark-submit  --master local[2]   --driver-class-path logging/  --class x.Str
  */
 
 
-object SS1_Intro {
+object Intro {
   def main(args: Array[String]) {
 
     val spark = SparkSession.builder.appName("Structured Streaming").

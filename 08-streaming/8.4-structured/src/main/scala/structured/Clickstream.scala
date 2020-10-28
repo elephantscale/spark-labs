@@ -1,4 +1,4 @@
-package x
+package structured
 
 
 import org.apache.spark.sql.functions._
@@ -9,7 +9,7 @@ $  spark-submit  --master local[2]   --driver-class-path logging/  --class x.JSO
  */
 
 
-object JSONStreaming {
+object Clickstream {
   def main(args: Array[String]) {
 
     val spark = SparkSession.builder.appName("Structured Streaming").

@@ -1,8 +1,6 @@
 <link rel='stylesheet' href='../../assets/css/main.css'/>
 
-
 # Lab - Structured Streaming 2 - WordCount
-
 
 ### Overview
 
@@ -16,7 +14,6 @@ None
 
 20-30 mins
 
-
 ## STEP 1: Go to project directory
 
 ```bash
@@ -25,7 +22,7 @@ None
 
 ## Step 2 : Inspect file
 
-Inspect file : [src/main/scala/x/SS2_WordCount.scala](src/main/scala/x/SS2_WordCount.scala)
+Inspect file : [src/main/scala/structured/WordCount.scala](src/main/scala/structured/WordCount.scala)
 
 Complete TODO items, if any
 
@@ -60,7 +57,7 @@ Open an terminal and run this command at prompt
     # be in project root directory
     $   cd ~/dev/spark-labs/08-streaming/8.4-structured
 
-    $  ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class x.SS2_WordCount  target/scala-2.12/structured-streaming_2.12-1.0.jar 
+    $  ~/apps/spark/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class structured.WordCount  target/scala-2.12/structured-streaming_2.12-1.0.jar 
 ```
 
 

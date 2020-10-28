@@ -1,6 +1,5 @@
 <link rel='stylesheet' href='../../assets/css/main.css'/>
 
-
 # Lab 8.4 - Structured Streaming 1
 
 ### Overview
@@ -15,18 +14,15 @@ None
 
 30-40 mins
 
-
 ## STEP 1: Go to project directory
 
 ```bash
     $    cd ~/dev/spark-labs/08-streaming/8.4-structured
 ```
 
-
 ## Step 2 : Fix TODO-1 & 2
 
-Edit file : `src/main/scala/x/SS1_Intro.scala`
-
+Edit file : `src/main/scala/structured/Intro.scala`
 
 ## Step 3: Build the project
 
@@ -39,7 +35,6 @@ We will use `sbt` to build the project.
     $  cd ~/dev/spark-labs/08-streaming/8.4-structured
     $  sbt clean package
 ```
-
 
 Make sure there are no errors and there is output in `target` dir.
 
@@ -65,8 +60,8 @@ Open an terminal and run this command at prompt
 
     $   ~/apps/spark/bin/spark-submit  --master local[2]   \
         --driver-class-path logging/  \
-        --class x.SS1_Intro  \
-        target/scala-2.12/structured-streaming_2.12-1.0.jar 
+        --class structured.Intro  \
+        target/scala-2.12/structured-streaming_2.12-1.0.jar
 ```
 
 Lets call this Terminal #1
