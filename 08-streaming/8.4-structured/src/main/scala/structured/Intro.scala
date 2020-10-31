@@ -1,13 +1,18 @@
+/*
+
+1. Simulate a source connection
+     $   ncat -l -k -p 10000
+
+2. Run the app
+    $  $SPARK_HOME/bin/spark-submit  --master local[2]   --driver-class-path logging/  --class structured.Intro  target/scala-2.12/structured-streaming_2.12-1.0.jar 
+    
+*/
+
 package structured
 
 
-import org.apache.spark.sql.functions._
+import org.apache.spark.sql.functions.lit
 import org.apache.spark.sql.SparkSession
-//import spark.implicits._
-
-/*
-$  spark-submit  --master local[2]   --driver-class-path logging/  --class x.StructuredStreaming  target/scala-2.11/structured-streaming_2.11-1.0.jar
- */
 
 
 object Intro {
@@ -15,24 +20,52 @@ object Intro {
 
     val spark = SparkSession.builder.appName("Structured Streaming").
                 getOrCreate()
+    import spark.implicits._
+      
+    // Set loglevel to Error
+    spark.sparkContext.setLogLevel("ERROR")
 
-      /*
-    // TODO-1  : set the port to 10000
-    val clickstream = spark.readStream.format("socket").
+    println("### Spark UI available on port : " + spark.sparkContext.uiWebUrl.get.split(':')(2))
+
+    /* 
+    //TODO-1 : Listen on port 10000
+    val lines = spark.readStream.format("socket").
                       option("host", "localhost").
                       option("port", ????)
                       .load()
 
-    // TODO-2 : printSchema
-    clickstream.printSchema
+    lines.printSchema
 
-    val query = clickstream.writeStream.
-                outputMode("append")
-                .format("console")
-                .start()
-
-    query.awaitTermination()
+      
+    // Print out incoming text
+    // the 'withColumn' is for debug, so we can identify query outupt
+    val query1 = lines
+                    .withColumn ("query", lit("query1"))
+                    .writeStream
+                    .outputMode("append")
+                    .format("console")
+                    .queryName("query1")
+                    .start()
+    // END TODO-1
+    */
+      
+    /*
+    // TODO-2  :filter lines that has 'x'
+    val x = lines.filter(lines("value").contains("???"))
+      
+      
+    val query2 = x
+                    .withColumn ("query", lit("query2"))
+                    .writeStream
+                    .outputMode("append")
+                    .format("console")
+                    .queryName("query2")
+                    .start()
+    // end TODO-2
     */
 
+    // wait forever until user terminate manually
+    spark.streams.awaitAnyTermination() 
+    spark.stop()
   }
 }

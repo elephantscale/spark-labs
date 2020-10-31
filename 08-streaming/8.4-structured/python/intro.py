@@ -1,6 +1,15 @@
+"""
+Simulating a source connection
+     $   ncat -l -k -p 10000
+
+Run the app
+     $   $SPARK_HOME/bin/spark-submit --master local[2] \
+         --driver-class-path ../logging/ \
+         intro.py
+"""
+
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import explode
-from pyspark.sql.functions import split
+from pyspark.sql.functions import lit
 
 # Initialize Spark
 spark = SparkSession \
@@ -22,30 +31,40 @@ lines = spark \
     .option("port", ???) \
     .load()
 
+
+## Print out the input
+## the 'withColumn' is for debug, so we can identify query outupt
 query1 = lines \
+    .withColumn ("query", lit("query1")) \
     .writeStream \
     .outputMode("append") \
     .format("console") \
+    .queryName("query1") \
     .start()
-
-# query1.awaitTermination()
-
-# END TODO-1
+    
+# ----- end-TODO-1
 """
 
-
+"""
 ## TODO-2  :filter lines that has 'x'
-# x = lines.filter(lines["value"].contains("x"))
+x = lines.filter(lines["value"].contains("???"))
+# ----- end-TODO-2
 
+
+## the 'withColumn' is for debug, so we can identify query outupt
 ## TODO-3 : To run query2 , comment out query1
-# query2 = x \
-#         .writeStream \
-#         .outputMode("append") \
-#         .format("console") \
-#         .start()
-# query2.awaitTermination()
+query2 = x \
+        .withColumn ("query", lit("query2")) \
+        .writeStream \
+        .outputMode("append") \
+        .format("console") \
+        .queryName("query2") \
+        .start()
+# ----- end-TODO-2
+"""
 
 
 # wait forever until user terminate manually
 spark.streams.awaitAnyTermination() 
+
 spark.stop()
