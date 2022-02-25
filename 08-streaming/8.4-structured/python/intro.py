@@ -34,11 +34,15 @@ lines = spark \
 
 ## Print out the input
 ## the 'withColumn' is for debug, so we can identify query outupt
+## Trigger interval = 3 second (micro batch)
+## https://stackoverflow.com/questions/57760563/how-to-specify-batch-interval-in-spark-structured-streaming
+
 query1 = lines \
     .withColumn ("query", lit("query1")) \
     .writeStream \
     .outputMode("append") \
     .format("console") \
+    .trigger(processingTime='3 seconds') \
     .queryName("query1") \
     .start()
     
@@ -53,6 +57,7 @@ x = lines.filter(lines["value"].contains("???"))
 
 ## the 'withColumn' is for debug, so we can identify query outupt
 ## TODO-3 : To run query2 , comment out query1
+## no trigger - so execute as soon as previous micro-batch completes
 query2 = x \
         .withColumn ("query", lit("query2")) \
         .writeStream \
