@@ -20,7 +20,6 @@ def init_spark():
              .setMaster("local[*]")
              .set('executor.memory', '2g')
              .set('spark.sql.warehouse.dir', tmpdir.name)
-             .set("some_property", "some_value") # another example
              )
 
     print("Spark config:\n\t", config.toDebugString().replace("\n", "\n\t"))

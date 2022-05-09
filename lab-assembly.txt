@@ -11,6 +11,7 @@
 07-graphx
 08-streaming
 09-ops
+experiments
 README-python.ipynb
 README-scala.md
 README.txt
