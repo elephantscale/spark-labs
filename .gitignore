@@ -15,6 +15,7 @@ out*
 *~
 *.html
 data
+tmp/
 
 metastore_db/
 
