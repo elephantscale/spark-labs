@@ -9,8 +9,8 @@ logs*
 out*
 *.zip*
 *.out
-*.csv
-*.json
+#*.csv
+#*.json
 ~*
 *~
 *.html
