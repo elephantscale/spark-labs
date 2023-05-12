@@ -67,3 +67,4 @@ In the "Application location" field, enter the S3 path of your Python script.
 Click on the "Add" button to submit your Spark job.
 After the job completes, you can check the output in the wordcount_output directory in your S3 bucket.
 
+* The code to run is here s3://elephantscale-public/software/CountLines.py
